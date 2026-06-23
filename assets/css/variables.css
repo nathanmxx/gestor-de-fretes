@@ -5,18 +5,18 @@
    ============================================================ */
 :root {
   /* Cores de fundo e superfície */
-  --bg:            #f4f3f0;   /* fundo geral (cinza bem claro) */
+  --bg:            #f8f8c3;   /* fundo geral (amarelo pastel suave) */
   --surface:       #ffffff;   /* cartões brancos */
-  --surface-2:     #faf9f7;   /* cartões secundários */
+  --surface-2:     #fdfdf5;   /* cartões secundários */
 
   /* Texto */
-  --text:          #1c1b1a;   /* texto principal */
-  --text-soft:     #6b6862;   /* texto secundário / rótulos */
-  --text-faint:    #9a968e;   /* texto bem suave */
+  --text:          #1a2233;   /* texto principal (azul muito escuro) */
+  --text-soft:     #4a5870;   /* texto secundário / rótulos */
+  --text-faint:    #8a9ab5;   /* texto bem suave */
 
   /* Cores de marca / estados */
-  --primary:       #c0564b;   /* coral/vermelho (igual à ferramenta antiga) */
-  --primary-soft:  #fbe9e7;   /* fundo suave do coral */
+  --primary:       #4d82bc;   /* azul principal */
+  --primary-soft:  #c4dafa;   /* azul bem claro (fundos suaves) */
   --positivo:      #1f9d57;   /* verde (lucro, pago, saldo positivo) */
   --positivo-soft: #e3f5ea;
   --negativo:      #c0392b;   /* vermelho (gastos, saldo negativo) */
@@ -24,8 +24,8 @@
   --alerta-soft:   #fbf1dc;
 
   /* Bordas e linhas */
-  --border:        #e7e4df;
-  --border-strong: #d9d5ce;
+  --border:        #dde8f8;   /* azul bem claro */
+  --border-strong: #c4dafa;   /* azul claro mais forte */
 
   /* Sombra dos cartões */
   --shadow:        0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);

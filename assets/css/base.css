@@ -84,7 +84,7 @@ body {
   padding: 4px;
   box-shadow: var(--shadow-lift);
 }
-.tab--cta.is-active svg { background: #a8473d; }
+.tab--cta.is-active svg { background: #3a6a9e; }
 
 /* Título grande no topo de cada tela (estilo "Dashboard" da ferramenta antiga) */
 .page-title {
