@@ -1,0 +1,52 @@
+/* ============================================================
+   VARIÁVEIS DE TEMA
+   Tudo que é "configurável" de visual fica aqui num lugar só.
+   Mudou a cor aqui, muda no app inteiro.
+   ============================================================ */
+:root {
+  /* Cores de fundo e superfície */
+  --bg:            #f4f3f0;   /* fundo geral (cinza bem claro) */
+  --surface:       #ffffff;   /* cartões brancos */
+  --surface-2:     #faf9f7;   /* cartões secundários */
+
+  /* Texto */
+  --text:          #1c1b1a;   /* texto principal */
+  --text-soft:     #6b6862;   /* texto secundário / rótulos */
+  --text-faint:    #9a968e;   /* texto bem suave */
+
+  /* Cores de marca / estados */
+  --primary:       #c0564b;   /* coral/vermelho (igual à ferramenta antiga) */
+  --primary-soft:  #fbe9e7;   /* fundo suave do coral */
+  --positivo:      #1f9d57;   /* verde (lucro, pago, saldo positivo) */
+  --positivo-soft: #e3f5ea;
+  --negativo:      #c0392b;   /* vermelho (gastos, saldo negativo) */
+  --alerta:        #c98a1e;   /* amarelo/laranja (pendente) */
+  --alerta-soft:   #fbf1dc;
+
+  /* Bordas e linhas */
+  --border:        #e7e4df;
+  --border-strong: #d9d5ce;
+
+  /* Sombra dos cartões */
+  --shadow:        0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lift:   0 4px 14px rgba(0,0,0,0.10);
+
+  /* Arredondamento */
+  --radius:        16px;
+  --radius-sm:     10px;
+  --radius-pill:   999px;
+
+  /* Espaçamentos */
+  --gap:           16px;
+  --gap-sm:        10px;
+  --gap-lg:        24px;
+
+  /* Tipografia */
+  --font-body:     system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display:  Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --max-width:     520px;     /* largura máxima (centraliza no desktop) */
+  --tabbar-h:      68px;      /* altura da barra de baixo */
+  --topbar-h:      52px;
+}

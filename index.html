@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#f4f3f0" />
+  <meta name="description" content="Gestor de Fretes — controle simples de fretes, ganhos e gastos para motoristas." />
+  <title>Gestor de Fretes</title>
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="topbar">
+    <span class="topbar__brand">🚚 Gestor de Fretes</span>
+  </header>
+
+  <!-- As telas são desenhadas aqui pelo router -->
+  <main id="app" class="app" aria-live="polite"></main>
+
+  <!-- Barra de navegação (parte de baixo, estilo app de celular) -->
+  <nav class="tabbar" aria-label="Navegação principal">
+    <a href="#/resumo" class="tab" data-tab="resumo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+      <span>Resumo</span>
+    </a>
+    <a href="#/fretes" class="tab" data-tab="fretes">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm12 0A1.5 1.5 0 1 1 19.5 17 1.5 1.5 0 0 1 18 18.5zm1-7.5h-2V9.5h1.5l1.5 2z"/></svg>
+      <span>Fretes</span>
+    </a>
+    <a href="#/frete" class="tab tab--cta" data-tab="frete" aria-label="Registrar novo frete">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <span>Novo</span>
+    </a>
+    <a href="#/receber" class="tab" data-tab="receber">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1H6.32c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      <span>A Receber</span>
+    </a>
+    <a href="#/mais" class="tab" data-tab="mais">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a2 2 0 1 0-2-2 2 2 0 0 0 2 2zm0 2a2 2 0 1 0 2 2 2 2 0 0 0-2-2zm0 6a2 2 0 1 0 2 2 2 2 0 0 0-2-2z"/></svg>
+      <span>Mais</span>
+    </a>
+  </nav>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

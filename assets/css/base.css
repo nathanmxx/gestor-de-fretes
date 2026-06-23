@@ -1,0 +1,100 @@
+/* ============================================================
+   BASE — reset leve + layout geral (topbar, app, tabbar)
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  /* espaço pra topbar (em cima) e tabbar (embaixo) não cobrirem o conteúdo */
+  padding-top: var(--topbar-h);
+  padding-bottom: var(--tabbar-h);
+}
+
+/* ---- Cabeçalho fixo ---- */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 20;
+}
+.topbar__brand {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+/* ---- Área das telas ---- */
+.app {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-lg) var(--gap) var(--gap);
+}
+
+/* ---- Barra de navegação inferior ---- */
+.tabbar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: var(--tabbar-h);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 20;
+}
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: var(--text-faint);
+  font-size: 0.68rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.tab svg { width: 24px; height: 24px; fill: currentColor; }
+.tab.is-active { color: var(--primary); }
+
+/* Botão central destacado (Novo frete) */
+.tab--cta { color: var(--primary); }
+.tab--cta svg {
+  width: 30px; height: 30px;
+  background: var(--primary);
+  fill: #fff;
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  box-shadow: var(--shadow-lift);
+}
+.tab--cta.is-active svg { background: #a8473d; }
+
+/* Título grande no topo de cada tela (estilo "Dashboard" da ferramenta antiga) */
+.page-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 var(--gap);
+}
+
+@media (min-width: 560px) {
+  .tabbar { border-radius: var(--radius) var(--radius) 0 0; }
+}
