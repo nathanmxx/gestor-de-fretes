@@ -10,7 +10,7 @@
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 14px 18px;
   box-shadow: var(--shadow);
   margin-bottom: var(--gap-sm);
 }
@@ -22,13 +22,21 @@
   margin-bottom: 6px;
 }
 .metric__value {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
 }
 .metric__value--positivo { color: var(--positivo); }
 .metric__value--negativo { color: var(--negativo); }
-.metric--destaque { border-color: var(--positivo); }
+
+/* Card de destaque — o número que mais importa na tela */
+.metric--destaque {
+  border: 2px solid var(--border-strong);
+  box-shadow: var(--shadow-lift);
+  padding: 18px 20px;
+}
+.metric--destaque .metric__value { font-size: 1.85rem; }
+.metric--destaque .metric__label { font-weight: 700; }
 
 .metric__icon {
   width: 46px; height: 46px;
@@ -37,10 +45,26 @@
   flex-shrink: 0;
 }
 .metric__icon svg { width: 24px; height: 24px; }
-.icon-coral   { background: var(--primary-soft); color: var(--primary); }
-.icon-verde   { background: var(--positivo-soft); color: var(--positivo); }
-.icon-amarelo { background: var(--alerta-soft); color: var(--alerta); }
+.icon-coral    { background: var(--primary-soft); color: var(--primary); }
+.icon-verde    { background: var(--positivo-soft); color: var(--positivo); }
+.icon-amarelo  { background: var(--alerta-soft); color: var(--alerta); }
+.icon-negativo { background: #fde8e8; color: var(--negativo); }
 .metric__icon svg { fill: currentColor; }
+
+/* Linha dupla: dois cards compactos lado a lado (ex: Receitas | Despesas) */
+.metric-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
+}
+.metric-row .metric {
+  margin-bottom: 0;
+  padding: 12px 14px;
+}
+.metric-row .metric__value { font-size: 1.15rem; }
+.metric-row .metric__icon  { width: 36px; height: 36px; border-radius: 8px; }
+.metric-row .metric__icon svg { width: 18px; height: 18px; }
 
 /* ---- Filtro de mês/ano ---- */
 .filtros {
@@ -95,7 +119,7 @@
 /* Caixa de resultado calculado (Preço, Frete, Lucro automáticos) */
 .calc-box {
   background: var(--surface-2);
-  border: 1px dashed var(--border-strong);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 14px 16px;
   display: flex;

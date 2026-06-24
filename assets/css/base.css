@@ -86,13 +86,14 @@ body {
 }
 .tab--cta.is-active svg { background: #3a6a9e; }
 
-/* Título grande no topo de cada tela (estilo "Dashboard" da ferramenta antiga) */
+/* Título grande no topo de cada tela */
 .page-title {
   font-family: var(--font-display);
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
   margin: 0 0 var(--gap);
+  color: var(--text);
 }
 
 @media (min-width: 560px) {
