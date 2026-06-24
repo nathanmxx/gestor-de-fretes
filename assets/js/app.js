@@ -8,6 +8,7 @@ import * as fretes from './views/fretes.js';
 import * as frete from './views/frete.js';
 import * as receber from './views/receber.js';
 import * as abastecimento from './views/abastecimento.js';
+import * as veiculo from './views/veiculo.js';
 import * as mais from './views/mais.js';
 import * as backup from './views/backup.js';
 
@@ -18,6 +19,7 @@ const ROTAS = {
   '/frete': frete,
   '/receber': receber,
   '/abastecimento': abastecimento,
+  '/veiculo': veiculo,
   '/mais': mais,
   '/backup': backup,
 };
@@ -29,6 +31,7 @@ const ABA_DA_ROTA = {
   '/frete': 'frete',
   '/receber': 'receber',
   '/abastecimento': 'mais',
+  '/veiculo': 'mais',
   '/mais': 'mais',
   '/backup': 'mais',
 };

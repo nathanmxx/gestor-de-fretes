@@ -4,13 +4,16 @@
    automaticamente pra evitar erro de digitação.
    ============================================================ */
 
-import { ORIGENS, DESTINOS, precoPorLitro } from '../config.js';
+import { ORIGENS, DESTINOS, precoPorLitro, kmRota } from '../config.js';
 import { fretes } from '../db.js';
 import { hojeIso, brl } from '../utils/format.js';
 import { calcularFrete, calcularLucro, validarFrete } from '../models/frete.js';
+import { depreciacaoDeKm } from '../models/depreciacao.js';
+import { veiculoConfigurado } from '../settings.js';
 import { toast, irPara, paramsDaRota, escapeHtml } from '../utils/ui.js';
 
 let editId = null;
+let kmEditadoManual = false; // se o usuário digitou o km à mão, não sobrescrevemos
 
 function precoTexto(preco) {
   return 'R$ ' + String(preco).replace('.', ',') + ' /litro';
@@ -19,6 +22,8 @@ function precoTexto(preco) {
 export function render() {
   editId = paramsDaRota().get('id');
   const f = editId ? fretes.pegar(editId) : null;
+  // se o frete já tinha km salvo, respeitamos (não auto-preenche por cima)
+  kmEditadoManual = !!(f && f.km);
 
   const opcoesOrigem = ORIGENS
     .map((o) => `<option value="${o}" ${f?.origem === o ? 'selected' : ''}>${o}</option>`).join('');
@@ -69,10 +74,16 @@ export function render() {
         <input class="input" type="number" id="despesas" inputmode="decimal" min="0" step="0.01" value="${f?.despesas ?? ''}" placeholder="Ex: 1400,00" />
       </div>
 
+      <div class="field">
+        <label class="field__label" for="km">Distância ida e volta (km) <span class="field__hint">(sugerida pela rota, dá pra ajustar)</span></label>
+        <input class="input" type="number" id="km" inputmode="numeric" min="0" value="${f?.km ?? ''}" placeholder="Escolha a rota que eu preencho" />
+      </div>
+
       <!-- Tudo aqui é calculado sozinho -->
       <div class="calc-box">
         <div class="calc-row"><span>Preço por litro (pela rota)</span><strong id="out-preco">—</strong></div>
         <div class="calc-row"><span>Valor do frete</span><strong id="out-frete">—</strong></div>
+        ${veiculoConfigurado() ? '<div class="calc-row"><span>Desgaste (veículo + pneus)</span><strong id="out-desgaste">—</strong></div>' : ''}
         <div class="calc-row calc-row--total"><span>Lucro</span><strong id="out-lucro">—</strong></div>
       </div>
 
@@ -100,26 +111,45 @@ export function mount() {
   const destino = document.getElementById('destino');
   const litros = document.getElementById('litros');
   const despesas = document.getElementById('despesas');
+  const km = document.getElementById('km');
   const outPreco = document.getElementById('out-preco');
   const outFrete = document.getElementById('out-frete');
   const outLucro = document.getElementById('out-lucro');
+  const outDesgaste = document.getElementById('out-desgaste'); // pode não existir (só se veículo configurado)
+
+  // Preenche o km pela rota, a menos que o usuário tenha digitado à mão
+  function atualizarKmSugerido() {
+    if (kmEditadoManual) return;
+    const sugerido = kmRota(origem.value, destino.value); // já vem ida e volta
+    km.value = sugerido != null ? sugerido : '';
+  }
 
   function recalcular() {
     const preco = precoPorLitro(origem.value, destino.value);
     if (preco == null) {
       outPreco.textContent = outFrete.textContent = outLucro.textContent = '—';
+      if (outDesgaste) outDesgaste.textContent = '—';
       return;
     }
     const valorFrete = calcularFrete(litros.value, preco);
     outPreco.textContent = precoTexto(preco);
     outFrete.textContent = brl(valorFrete);
     outLucro.textContent = brl(calcularLucro(valorFrete, despesas.value));
+    if (outDesgaste) outDesgaste.textContent = brl(depreciacaoDeKm(km.value));
   }
 
-  [origem, destino, litros, despesas].forEach((el) => {
+  // troca de rota: sugere o km e recalcula
+  [origem, destino].forEach((el) => {
+    el.addEventListener('change', () => { atualizarKmSugerido(); recalcular(); });
+  });
+  // demais campos: só recalculam
+  [litros, despesas].forEach((el) => {
     el.addEventListener('input', recalcular);
     el.addEventListener('change', recalcular);
   });
+  // se o usuário mexer no km, marca como manual e recalcula
+  km.addEventListener('input', () => { kmEditadoManual = true; recalcular(); });
+
   recalcular();
 
   form.addEventListener('submit', (e) => {
@@ -132,6 +162,7 @@ export function mount() {
       cliente: document.getElementById('cliente').value.trim(),
       litros: Number(litros.value),
       despesas: Number(despesas.value) || 0,
+      km: Number(km.value) || 0,
       pago: document.getElementById('pago-sim').checked,
       preco: precoPorLitro(origem.value, destino.value) || 0,
     };
