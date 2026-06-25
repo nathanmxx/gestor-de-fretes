@@ -250,7 +250,7 @@ Não há configuração de build. A Vercel serve os arquivos como estão. Nenhum
 
 ## Origem do Projeto
 
-A ideia surgiu da experiência do um motorista, que trabalhou como motorista de caminhão transportando combustível. Conversando com ele e com outros motoristas, ficou claro que havia uma necessidade comum: uma ferramenta simples para auxiliar nos cálculos e na gestão financeira do trabalho — sem planilhas complicadas, sem contas manuais.
+A ideia surgiu da experiência do um motorista, que trabalhou como e com motoristas de caminhão transportando combustível. Conversando com ele e com outros motoristas, ficou claro que havia uma necessidade comum: uma ferramenta simples para auxiliar nos cálculos e na gestão financeira do trabalho — sem planilhas complicadas, sem contas manuais.
 
 Existia uma tentativa anterior, mas ela travava ao registrar viagens (erro de JavaScript não tratado) e usava conceitos genéricos que não refletiam como o motorista realmente trabalha — por litro transportado e por rota. Este projeto nasceu para corrigir exatamente esses dois problemas: espelhar a lógica que eles já conhecem e nunca travar.
 
