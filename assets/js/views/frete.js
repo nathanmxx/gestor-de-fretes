@@ -65,7 +65,7 @@ export function render() {
 
       <div class="field" id="campo-litros">
         <label class="field__label" for="litros">Litros transportados</label>
-        <input class="input" type="number" id="litros" inputmode="numeric" min="0" value="${f?.litros ?? ''}" placeholder="Ex: 30000" />
+        <input class="input" type="number" id="litros" inputmode="decimal" min="0" step="0.01" value="${f?.litros ?? ''}" placeholder="Ex: 30000,00" />
         <small class="field__erro"></small>
       </div>
 
