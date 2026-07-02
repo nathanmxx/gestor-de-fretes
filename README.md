@@ -50,11 +50,11 @@ Lucro = 3.900 − 1.400 = R$ 2.500,00
 
 ### Tabela de preços (R$ por litro)
 
-| Origem | → Destino 1 | → Destino 2 |
-|--------|:---:|:---:|
-| Cidade A | 0,10 | 0,15 |
-| Cidade B | 0,25 | 0,30 |
-| Cidade C | 0,35 | 0,40 |
+| Origem | → Destino 1 | → Destino 2 | → Destino 3 |
+|--------|:---:|:---:|:---:|
+| Cidade A | 0,10 | 0,15 | 0,80 |
+| Cidade B | 0,25 | 0,30 | — |
+| Cidade C | 0,35 | 0,40 | — |
 
 > Para alterar os preços ou adicionar rotas, edite `assets/js/config.js` — o app inteiro passa a usar o valor novo.
 
