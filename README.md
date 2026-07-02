@@ -52,7 +52,7 @@ Lucro = 3.900 − 1.400 = R$ 2.500,00
 
 | Origem | → Destino 1 | → Destino 2 | → Destino 3 |
 |--------|:---:|:---:|:---:|
-| Cidade A | 0,10 | 0,15 | 0,80 |
+| Cidade A | 0,10 | 0,15 | 0,20 |
 | Cidade B | 0,25 | 0,30 | — |
 | Cidade C | 0,35 | 0,40 | — |
 
