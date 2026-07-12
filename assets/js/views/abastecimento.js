@@ -74,7 +74,7 @@ export function render() {
     <div class="section-title">Histórico</div>
     ${lista.length
       ? `<div class="lista">${lista.map(cardAbast).join('')}</div>`
-      : `<div class="vazio"><div class="vazio__emoji">⛽</div><p><strong>Sem abastecimentos ainda</strong></p></div>`}
+      : `<div class="vazio"><div class="vazio__icone icon-coral">${ICON_FUEL}</div><p><strong>Sem abastecimentos ainda</strong></p></div>`}
   `;
 }
 

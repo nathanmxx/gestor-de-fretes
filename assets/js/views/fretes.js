@@ -7,7 +7,7 @@ import { brl, numero, dataBr } from '../utils/format.js';
 import { calcularFrete } from '../models/frete.js';
 import { filtro, seletorMesAnoHtml, ligarSeletorMesAno, noMesFiltro } from '../state.js';
 import { escapeHtml, toast } from '../utils/ui.js';
-import { ICON_CHECK, ICON_EDIT, ICON_TRASH } from '../utils/icons.js';
+import { ICON_CHECK, ICON_EDIT, ICON_TRASH, ICON_CAIXA } from '../utils/icons.js';
 
 function cardFrete(f) {
   const valor = calcularFrete(f.litros, f.preco);
@@ -39,7 +39,7 @@ function cardFrete(f) {
 function estadoVazio() {
   return `
     <div class="vazio">
-      <div class="vazio__emoji">📦</div>
+      <div class="vazio__icone icon-coral">${ICON_CAIXA}</div>
       <p><strong>Nenhum frete neste mês</strong></p>
       <p>Toque em "Novo frete" pra registrar o primeiro.</p>
     </div>`;

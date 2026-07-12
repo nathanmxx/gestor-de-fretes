@@ -31,9 +31,19 @@ body {
   z-index: 20;
 }
 .topbar__brand {
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: var(--text-soft);
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.topbar__logo {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: var(--primary-strong);
 }
 
 /* ---- Área das telas ---- */
@@ -72,26 +82,26 @@ body {
   transition: color 0.15s;
 }
 .tab svg { width: 24px; height: 24px; fill: currentColor; }
-.tab.is-active { color: var(--primary); }
+.tab.is-active { color: var(--primary-strong); }
 
 /* Botão central destacado (Novo frete) */
-.tab--cta { color: var(--primary); }
+.tab--cta { color: var(--primary-strong); }
 .tab--cta svg {
   width: 30px; height: 30px;
   background: var(--primary);
-  fill: #fff;
+  fill: var(--on-primary);
   border-radius: var(--radius-pill);
   padding: 4px;
   box-shadow: var(--shadow-lift);
 }
-.tab--cta.is-active svg { background: #3a6a9e; }
+.tab--cta.is-active svg { background: var(--primary-strong); }
 
 /* Título grande no topo de cada tela */
 .page-title {
   font-family: var(--font-display);
   font-size: 1.65rem;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin: 0 0 var(--gap);
   color: var(--text);
 }

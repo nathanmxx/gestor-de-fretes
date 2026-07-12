@@ -23,7 +23,7 @@ export function render() {
     </p>
 
     <form class="form" id="form-veiculo" novalidate>
-      <div class="section-title" style="margin-top:0">🚛 Caminhão</div>
+      <div class="section-title" style="margin-top:0">Caminhão</div>
 
       <div class="field">
         <label class="field__label" for="valorCompra">Valor de compra (ou valor atual)</label>
@@ -38,7 +38,7 @@ export function render() {
         <input class="input" type="number" id="vidaUtilKm" inputmode="numeric" min="0" value="${v.vidaUtilKm || ''}" placeholder="Ex: 1000000" />
       </div>
 
-      <div class="section-title">🛞 Pneus</div>
+      <div class="section-title">Pneus</div>
 
       <div class="field">
         <label class="field__label" for="precoJogoPneus">Preço do jogo completo de pneus</label>

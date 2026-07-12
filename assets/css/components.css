@@ -45,10 +45,10 @@
   flex-shrink: 0;
 }
 .metric__icon svg { width: 24px; height: 24px; }
-.icon-coral    { background: var(--primary-soft); color: var(--primary); }
+.icon-coral    { background: var(--secundario-soft); color: var(--secundario); }
 .icon-verde    { background: var(--positivo-soft); color: var(--positivo); }
 .icon-amarelo  { background: var(--alerta-soft); color: var(--alerta); }
-.icon-negativo { background: #fde8e8; color: var(--negativo); }
+.icon-negativo { background: var(--negativo-soft); color: var(--negativo); }
 .metric__icon svg { fill: currentColor; }
 
 /* Linha dupla: dois cards compactos lado a lado (ex: Receitas | Despesas) */
@@ -75,7 +75,7 @@
 .filtros select {
   flex: 1;
   appearance: none;
-  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%236b6862' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23565e6b' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 12px center;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 12px 14px;
@@ -109,7 +109,7 @@
 }
 .select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%236b6862' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23565e6b' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
 }
@@ -174,8 +174,8 @@
   transition: transform 0.06s, filter 0.15s;
 }
 .btn:active { transform: scale(0.98); }
-.btn--primary { background: var(--primary); color: #fff; }
-.btn--primary:hover { filter: brightness(1.05); }
+.btn--primary { background: var(--primary); color: var(--on-primary); }
+.btn--primary:hover { background: var(--primary-strong); }
 .btn--ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border-strong); }
 .btn--danger { background: transparent; color: var(--negativo); }
 .btn--block { width: 100%; }
@@ -240,7 +240,13 @@
   padding: 48px 20px;
   color: var(--text-faint);
 }
-.vazio__emoji { font-size: 3rem; margin-bottom: 12px; }
+.vazio__icone {
+  width: 64px; height: 64px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+}
+.vazio__icone svg { width: 28px; height: 28px; fill: currentColor; }
 .vazio p { margin: 4px 0; }
 
 /* ---- Seção / título de bloco ---- */
@@ -272,7 +278,7 @@
   font-size: 1rem;
   font-family: inherit;
 }
-.menu-item svg { width: 24px; height: 24px; fill: var(--primary); flex-shrink: 0; }
+.menu-item svg { width: 24px; height: 24px; fill: var(--primary-strong); flex-shrink: 0; }
 .menu-item__txt strong { display: block; font-weight: 600; }
 .menu-item__txt small { color: var(--text-faint); }
 

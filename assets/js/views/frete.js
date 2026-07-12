@@ -91,9 +91,9 @@ export function render() {
         <label class="field__label">Situação do pagamento</label>
         <div class="switch-pago">
           <input type="radio" name="pago" id="pago-sim" value="sim" ${f?.pago ? 'checked' : ''}>
-          <label for="pago-sim">✓ Pago</label>
+          <label for="pago-sim">Pago</label>
           <input type="radio" name="pago" id="pago-nao" value="nao" ${!f?.pago ? 'checked' : ''}>
-          <label for="pago-nao">⏳ Pendente</label>
+          <label for="pago-nao">Pendente</label>
         </div>
       </div>
 

@@ -5,31 +5,40 @@
    ============================================================ */
 :root {
   /* Cores de fundo e superfície */
-  --bg:            #f8f8c3;   /* fundo geral (amarelo pastel suave) */
+  --bg:            #f6f6f8;   /* fundo geral — cinza frio bem claro */
   --surface:       #ffffff;   /* cartões brancos */
-  --surface-2:     #fdfdf5;   /* cartões secundários */
+  --surface-2:     #f0f1f3;   /* cartões secundários */
 
   /* Texto */
-  --text:          #1a2233;   /* texto principal (azul muito escuro) */
-  --text-soft:     #4a5870;   /* texto secundário / rótulos */
-  --text-faint:    #8a9ab5;   /* texto bem suave */
+  --text:          #1c1f26;   /* texto principal (cinza-azulado quase preto) */
+  --text-soft:     #565e6b;   /* texto secundário / rótulos */
+  --text-faint:    #99a0ac;   /* texto bem suave */
 
-  /* Cores de marca / estados */
-  --primary:       #4d82bc;   /* azul principal */
-  --primary-soft:  #c4dafa;   /* azul bem claro (fundos suaves) */
+  /* Cor de marca: mostarda */
+  --primary:         #d4a017; /* mostarda — fundo de botões e destaques */
+  --primary-strong:  #a6790c; /* mostarda escura — texto/ícone sobre fundo claro, hover */
+  --primary-soft:    #faf0d6; /* mostarda bem clara — fundos suaves, foco */
+  --on-primary:      #20242c; /* texto/ícone sobre fundo mostarda */
+
+  /* Cor secundária: roxo (métricas neutras — km, litros, contadores) */
+  --secundario:      #7c5cbf;
+  --secundario-soft: #efe9fb;
+
+  /* Estados semânticos */
   --positivo:      #1f9d57;   /* verde (lucro, pago, saldo positivo) */
   --positivo-soft: #e3f5ea;
   --negativo:      #c0392b;   /* vermelho (gastos, saldo negativo) */
-  --alerta:        #c98a1e;   /* amarelo/laranja (pendente) */
-  --alerta-soft:   #fbf1dc;
+  --negativo-soft: #fde8e8;
+  --alerta:        #b5650d;   /* laranja queimado (pendente) */
+  --alerta-soft:   #fbeee1;
 
   /* Bordas e linhas */
-  --border:        #dde8f8;   /* azul bem claro */
-  --border-strong: #c4dafa;   /* azul claro mais forte */
+  --border:        #e6e8ec;
+  --border-strong: #d7dae0;
 
   /* Sombra dos cartões */
-  --shadow:        0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-lift:   0 4px 14px rgba(0,0,0,0.10);
+  --shadow:        0 1px 3px rgba(20,20,25,0.06), 0 1px 2px rgba(20,20,25,0.04);
+  --shadow-lift:   0 4px 14px rgba(20,20,25,0.10);
 
   /* Arredondamento */
   --radius:        16px;
@@ -42,8 +51,8 @@
   --gap-lg:        24px;
 
   /* Tipografia */
-  --font-body:     system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display:  Georgia, "Times New Roman", serif;
+  --font-body:     'Sora', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display:  'Sora', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Layout */
   --max-width:     520px;     /* largura máxima (centraliza no desktop) */

@@ -7,7 +7,7 @@ import { fretes } from '../db.js';
 import { brl, numero, dataBr } from '../utils/format.js';
 import { calcularFrete } from '../models/frete.js';
 import { escapeHtml, toast } from '../utils/ui.js';
-import { ICON_RELOGIO } from '../utils/icons.js';
+import { ICON_RELOGIO, ICON_CHECK } from '../utils/icons.js';
 
 function listarPendentes() {
   return fretes.listar()
@@ -36,7 +36,7 @@ function card(f) {
 function vazio() {
   return `
     <div class="vazio">
-      <div class="vazio__emoji">✅</div>
+      <div class="vazio__icone icon-verde">${ICON_CHECK}</div>
       <p><strong>Tudo recebido!</strong></p>
       <p>Nenhum frete pendente no momento.</p>
     </div>`;
