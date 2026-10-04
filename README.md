@@ -1,6 +1,6 @@
 # Gestor de Fretes
 
-Aplicação web para motoristas de caminhão controlarem fretes, ganhos e gastos. O app calcula o valor do frete, o saldo do mês e o desgaste do veículo.
+Aplicação web para quem gerencia fretados e entregas de caminhão controlar viagens, ganhos e gastos. O app calcula o valor do frete, o saldo do mês e o desgaste do veículo.
 
 ## Stack
 
@@ -207,9 +207,13 @@ Hospedado na Vercel como site estático. Atualiza sozinho a cada push na branch 
 
 ## Sobre o projeto
 
-Fiz esse app depois de ver de perto como funciona o trabalho de quem transporta combustível: a cobrança é por litro e muda conforme a rota, o que não bate com os apps genéricos de entrega que existem por aí.
+O app é voltado para gerentes de fretados e de entregas de caminhão, uma área que tem pouca ferramenta feita sob medida. Quem trabalha nesse setor costuma acabar numa planilha ou num caderno, porque os aplicativos de entrega que existem são pensados em "pedido" e "coleta".
 
-Tinha uma versão anterior que travava na hora de registrar uma viagem, por causa de um erro de JavaScript que não era tratado. Refiz do zero com dois objetivos: seguir a lógica que o motorista já usa e não travar.
+Esses conceitos não servem para quem cobra por litro transportado, com preço fixo por rota. É uma forma de cobrança comum no transporte de combustível e de carga a granel, e nenhum app genérico dá conta dela.
+
+A ideia foi partir daí: montar um sistema que siga a lógica de cobrança que o setor já usa, em vez de obrigar a pessoa a adaptar o trabalho dela ao programa. O cálculo do frete, do lucro e do desgaste do veículo sai automático a partir da rota e dos litros, que são os dois números que o gestor já tem na mão.
+
+Tinha uma versão anterior desse sistema que travava na hora de registrar uma viagem, por causa de um erro de JavaScript que não era tratado. Refiz do zero com dois objetivos: seguir a lógica que o setor já usa e não travar.
 
 ## Licença
 
