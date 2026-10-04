@@ -1,5 +1,5 @@
 /* ============================================================
-   DB — "banco de dados" local em cima do storage.
+   DB - "banco de dados" local em cima do storage.
    Cria coleções (fretes, abastecimentos) com as operações
    básicas: listar, pegar um, adicionar, atualizar, remover.
    O resto do app conversa só com isto, nunca com o localStorage direto.

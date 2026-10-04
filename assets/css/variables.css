@@ -5,7 +5,7 @@
    ============================================================ */
 :root {
   /* Cores de fundo e superfície */
-  --bg:            #f6f6f8;   /* fundo geral — cinza frio bem claro */
+  --bg:            #f6f6f8;   /* fundo geral - cinza frio bem claro */
   --surface:       #ffffff;   /* cartões brancos */
   --surface-2:     #f0f1f3;   /* cartões secundários */
 
@@ -15,12 +15,12 @@
   --text-faint:    #99a0ac;   /* texto bem suave */
 
   /* Cor de marca: mostarda */
-  --primary:         #d4a017; /* mostarda — fundo de botões e destaques */
-  --primary-strong:  #a6790c; /* mostarda escura — texto/ícone sobre fundo claro, hover */
-  --primary-soft:    #faf0d6; /* mostarda bem clara — fundos suaves, foco */
+  --primary:         #d4a017; /* mostarda - fundo de botões e destaques */
+  --primary-strong:  #a6790c; /* mostarda escura - texto/ícone sobre fundo claro, hover */
+  --primary-soft:    #faf0d6; /* mostarda bem clara - fundos suaves, foco */
   --on-primary:      #20242c; /* texto/ícone sobre fundo mostarda */
 
-  /* Cor secundária: roxo (métricas neutras — km, litros, contadores) */
+  /* Cor secundária: roxo (métricas neutras - km, litros, contadores) */
   --secundario:      #7c5cbf;
   --secundario-soft: #efe9fb;
 

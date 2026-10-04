@@ -1,5 +1,5 @@
 /* ============================================================
-   TELA: BACKUP — exportar, importar e apagar os dados.
+   TELA: BACKUP - exportar, importar e apagar os dados.
    O export gera um .csv que também abre no Excel (igual planilha).
    ============================================================ */
 
@@ -22,7 +22,7 @@ export function render() {
       ${ICON_DOWNLOAD}
       <span class="menu-item__txt">
         <strong>Exportar planilha (.csv)</strong>
-        <small>Baixa todos os fretes — abre no Excel</small>
+        <small>Baixa todos os fretes - abre no Excel</small>
       </span>
     </button>
 

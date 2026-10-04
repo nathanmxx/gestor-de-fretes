@@ -1,5 +1,5 @@
 /* ============================================================
-   COMPONENTES — cartões, formulários, botões, listas, etc.
+   COMPONENTES - cartões, formulários, botões, listas, etc.
    ============================================================ */
 
 /* ---- Cartão de métrica (Receitas, Despesas, Saldo...) ---- */
@@ -29,7 +29,7 @@
 .metric__value--positivo { color: var(--positivo); }
 .metric__value--negativo { color: var(--negativo); }
 
-/* Card de destaque — o número que mais importa na tela */
+/* Card de destaque - o número que mais importa na tela */
 .metric--destaque {
   border: 2px solid var(--border-strong);
   box-shadow: var(--shadow-lift);

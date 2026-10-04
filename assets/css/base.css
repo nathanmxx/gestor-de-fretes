@@ -1,5 +1,5 @@
 /* ============================================================
-   BASE — reset leve + layout geral (topbar, app, tabbar)
+   BASE - reset leve + layout geral (topbar, app, tabbar)
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; }

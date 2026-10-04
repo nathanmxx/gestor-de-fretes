@@ -1,5 +1,5 @@
 /* ============================================================
-   FORMAT — funções pra mostrar números e datas bonitinhos.
+   FORMAT - funções pra mostrar números e datas bonitinhos.
    ============================================================ */
 
 const fmtMoeda = new Intl.NumberFormat('pt-BR', {

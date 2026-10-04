@@ -1,5 +1,5 @@
 /* ============================================================
-   TELA: ABASTECIMENTO — controle de combustível do caminhão.
+   TELA: ABASTECIMENTO - controle de combustível do caminhão.
    Registra litros, valor e o km do odômetro; calcula a média km/L.
    ============================================================ */
 

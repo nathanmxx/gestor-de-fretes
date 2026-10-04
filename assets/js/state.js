@@ -1,5 +1,5 @@
 /* ============================================================
-   STATE — estado compartilhado entre telas.
+   STATE - estado compartilhado entre telas.
    Por enquanto guarda só o filtro de mês/ano selecionado,
    pra ele continuar igual ao navegar entre Resumo e Fretes.
    ============================================================ */

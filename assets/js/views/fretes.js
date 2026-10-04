@@ -1,5 +1,5 @@
 /* ============================================================
-   TELA: FRETES — lista dos fretes do mês selecionado.
+   TELA: FRETES - lista dos fretes do mês selecionado.
    ============================================================ */
 
 import { fretes } from '../db.js';

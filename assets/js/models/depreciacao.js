@@ -1,5 +1,5 @@
 /* ============================================================
-   MODELO DEPRECIAÇÃO — o "desgaste" (custo invisível) por km.
+   MODELO DEPRECIAÇÃO - o "desgaste" (custo invisível) por km.
    Método linear por km: o caminhão e os pneus se gastam rodando,
    então diluímos o custo deles ao longo da vida útil em km.
    ============================================================ */

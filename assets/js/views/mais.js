@@ -1,8 +1,8 @@
 /* ============================================================
-   TELA: MAIS — menu com as opções extras (abastecimento, backup).
+   TELA: MAIS - menu com as opções extras (abastecimento, backup).
    ============================================================ */
 
-import { ICON_FUEL, ICON_DOWNLOAD, ICON_CAIXA, ICON_VEICULO } from '../utils/icons.js';
+import { ICON_FUEL, ICON_DOWNLOAD, ICON_CAIXA, ICON_VEICULO, ICON_CAMINHAO } from '../utils/icons.js';
 
 function item(rota, icone, titulo, descricao) {
   return `
@@ -18,6 +18,7 @@ function item(rota, icone, titulo, descricao) {
 export function render() {
   return `
     <h1 class="page-title">Mais</h1>
+    ${item('#/rotas', ICON_CAMINHAO, 'Minhas Rotas', 'Preço por litro e km de cada trajeto')}
     ${item('#/veiculo', ICON_VEICULO, 'Meu Veículo', 'Depreciação do caminhão e dos pneus')}
     ${item('#/abastecimento', ICON_FUEL, 'Abastecimentos', 'Combustível e média de consumo')}
     ${item('#/backup', ICON_DOWNLOAD, 'Backup dos dados', 'Exportar / importar planilha (.csv)')}

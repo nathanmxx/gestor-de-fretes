@@ -1,10 +1,10 @@
 /* ============================================================
-   TELA: FRETE — formulário de novo frete (ou edição).
+   TELA: FRETE - formulário de novo frete (ou edição).
    É o coração do app: preço, frete e lucro são calculados
    automaticamente pra evitar erro de digitação.
    ============================================================ */
 
-import { ORIGENS, DESTINOS, precoPorLitro, kmRota } from '../config.js';
+import { origens, destinos, precoPorLitro, kmRota } from '../rotas.js';
 import { fretes } from '../db.js';
 import { hojeIso, brl } from '../utils/format.js';
 import { calcularFrete, calcularLucro, validarFrete } from '../models/frete.js';
@@ -25,9 +25,9 @@ export function render() {
   // se o frete já tinha km salvo, respeitamos (não auto-preenche por cima)
   kmEditadoManual = !!(f && f.km);
 
-  const opcoesOrigem = ORIGENS
+  const opcoesOrigem = origens()
     .map((o) => `<option value="${o}" ${f?.origem === o ? 'selected' : ''}>${o}</option>`).join('');
-  const opcoesDestino = DESTINOS
+  const opcoesDestino = destinos()
     .map((d) => `<option value="${d}" ${f?.destino === d ? 'selected' : ''}>${d}</option>`).join('');
 
   return `
@@ -81,10 +81,10 @@ export function render() {
 
       <!-- Tudo aqui é calculado sozinho -->
       <div class="calc-box">
-        <div class="calc-row"><span>Preço por litro (pela rota)</span><strong id="out-preco">—</strong></div>
-        <div class="calc-row"><span>Valor do frete</span><strong id="out-frete">—</strong></div>
-        ${veiculoConfigurado() ? '<div class="calc-row"><span>Desgaste (veículo + pneus)</span><strong id="out-desgaste">—</strong></div>' : ''}
-        <div class="calc-row calc-row--total"><span>Lucro</span><strong id="out-lucro">—</strong></div>
+        <div class="calc-row"><span>Preço por litro (pela rota)</span><strong id="out-preco">-</strong></div>
+        <div class="calc-row"><span>Valor do frete</span><strong id="out-frete">-</strong></div>
+        ${veiculoConfigurado() ? '<div class="calc-row"><span>Desgaste (veículo + pneus)</span><strong id="out-desgaste">-</strong></div>' : ''}
+        <div class="calc-row calc-row--total"><span>Lucro</span><strong id="out-lucro">-</strong></div>
       </div>
 
       <div class="field">
@@ -127,8 +127,8 @@ export function mount() {
   function recalcular() {
     const preco = precoPorLitro(origem.value, destino.value);
     if (preco == null) {
-      outPreco.textContent = outFrete.textContent = outLucro.textContent = '—';
-      if (outDesgaste) outDesgaste.textContent = '—';
+      outPreco.textContent = outFrete.textContent = outLucro.textContent = '-';
+      if (outDesgaste) outDesgaste.textContent = '-';
       return;
     }
     const valorFrete = calcularFrete(litros.value, preco);

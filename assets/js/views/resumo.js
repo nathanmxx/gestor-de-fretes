@@ -1,9 +1,9 @@
 /* ============================================================
-   TELA: RESUMO — painel com os totais do mês.
+   TELA: RESUMO - painel com os totais do mês.
    ============================================================ */
 
 import { fretes, abastecimentos } from '../db.js';
-import { kmRota } from '../config.js';
+import { kmRota } from '../rotas.js';
 import { brl, numero } from '../utils/format.js';
 import { calcularFrete } from '../models/frete.js';
 import { depreciacaoDeKm } from '../models/depreciacao.js';

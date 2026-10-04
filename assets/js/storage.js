@@ -1,15 +1,15 @@
 /* ============================================================
-   STORAGE — camada de acesso ao localStorage do navegador.
+   STORAGE - camada de acesso ao localStorage do navegador.
    É a única parte do código que fala diretamente com o navegador
    pra ler/gravar dados. Todo o resto usa o db.js (mais acima).
    ============================================================ */
 
-const PREFIX = 'gdf:'; // "gestor de fretes" — evita conflito com outros sites
+const PREFIX = 'gdf:'; // prefixo do app, evita conflito com outros sites
 
 /**
  * Lê uma chave do localStorage e devolve o valor (objeto/lista).
  * Se der qualquer erro (dado corrompido, etc.), devolve o fallback
- * em vez de quebrar o app — foi isso que dava o "código bizarro" antes.
+ * em vez de quebrar o app.
  */
 export function load(key, fallback = null) {
   try {

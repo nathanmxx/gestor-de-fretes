@@ -1,5 +1,5 @@
 /* ============================================================
-   SETTINGS — configurações do veículo do usuário (informadas 1 vez).
+   SETTINGS - configurações do veículo do usuário (informadas 1 vez).
    Servem de base para calcular a depreciação (desgaste) por km.
    ============================================================ */
 

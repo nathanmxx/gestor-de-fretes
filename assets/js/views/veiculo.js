@@ -1,5 +1,5 @@
 /* ============================================================
-   TELA: MEU VEÍCULO — dados do caminhão e dos pneus (1 vez só).
+   TELA: MEU VEÍCULO - dados do caminhão e dos pneus (1 vez só).
    Servem para estimar a depreciação (desgaste) por km.
    ============================================================ */
 
@@ -51,9 +51,9 @@ export function render() {
 
       <!-- Resultado calculado ao vivo -->
       <div class="calc-box">
-        <div class="calc-row"><span>Desgaste do caminhão</span><strong id="out-veiculo">—</strong></div>
-        <div class="calc-row"><span>Desgaste dos pneus</span><strong id="out-pneus">—</strong></div>
-        <div class="calc-row calc-row--total"><span>Desgaste total por km</span><strong id="out-total">—</strong></div>
+        <div class="calc-row"><span>Desgaste do caminhão</span><strong id="out-veiculo">-</strong></div>
+        <div class="calc-row"><span>Desgaste dos pneus</span><strong id="out-pneus">-</strong></div>
+        <div class="calc-row calc-row--total"><span>Desgaste total por km</span><strong id="out-total">-</strong></div>
       </div>
 
       <button type="submit" class="btn btn--primary btn--block">Salvar dados do veículo</button>

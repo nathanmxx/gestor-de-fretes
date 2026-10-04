@@ -1,5 +1,5 @@
 /* ============================================================
-   APP — ponto de entrada e "roteador".
+   APP - ponto de entrada e "roteador".
    Olha o # da URL e decide qual tela desenhar dentro de <main id="app">.
    ============================================================ */
 
@@ -11,6 +11,7 @@ import * as abastecimento from './views/abastecimento.js';
 import * as veiculo from './views/veiculo.js';
 import * as mais from './views/mais.js';
 import * as backup from './views/backup.js';
+import * as rotas from './views/rotas.js';
 
 // rota -> módulo da tela
 const ROTAS = {
@@ -22,6 +23,7 @@ const ROTAS = {
   '/veiculo': veiculo,
   '/mais': mais,
   '/backup': backup,
+  '/rotas': rotas,
 };
 
 // rota -> qual aba da barra de baixo fica acesa
@@ -34,6 +36,7 @@ const ABA_DA_ROTA = {
   '/veiculo': 'mais',
   '/mais': 'mais',
   '/backup': 'mais',
+  '/rotas': 'mais',
 };
 
 function navegar() {

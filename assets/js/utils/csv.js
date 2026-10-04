@@ -1,11 +1,11 @@
 /* ============================================================
-   CSV — exportar e importar os fretes como planilha (.csv).
+   CSV - exportar e importar os fretes como planilha (.csv).
    Serve de BACKUP e também abre direto no Excel, igual à
    planilha que o motorista já conhece.
    ============================================================ */
 
 import { calcularFrete, calcularLucro } from '../models/frete.js';
-import { precoPorLitro } from '../config.js';
+import { precoPorLitro } from '../rotas.js';
 
 // Ordem das colunas no arquivo (mesma ideia da planilha original)
 const COLUNAS = ['DATA', 'ORIGEM', 'DESTINO', 'CLIENTE', 'LITROS', 'PRECO', 'FRETE', 'DESPESAS', 'LUCRO', 'SITUACAO'];

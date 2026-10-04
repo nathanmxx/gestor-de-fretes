@@ -1,5 +1,5 @@
 /* ============================================================
-   TELA: A RECEBER — todos os fretes ainda PENDENTES (qualquer mês).
+   TELA: A RECEBER - todos os fretes ainda PENDENTES (qualquer mês).
    Mostra quanto falta receber e deixa marcar como pago.
    ============================================================ */
 

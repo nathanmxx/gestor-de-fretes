@@ -1,5 +1,5 @@
 /* ============================================================
-   MODELO FRETE — as "contas" do frete num lugar só.
+   MODELO FRETE - as "contas" do frete num lugar só.
    Manter o cálculo aqui (e não espalhado nas telas) garante que
    o app inteiro calcula igual, sem divergência.
    ============================================================ */

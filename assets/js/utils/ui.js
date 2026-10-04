@@ -1,5 +1,5 @@
 /* ============================================================
-   UI — pequenos auxiliares de interface reaproveitados nas telas.
+   UI - pequenos auxiliares de interface reaproveitados nas telas.
    ============================================================ */
 
 /** Escapa texto que vem do usuário antes de jogar no HTML (segurança). */
